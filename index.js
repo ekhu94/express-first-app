@@ -21,6 +21,14 @@ app.get('/r/:subreddit/comments/:postId', (req, res) => {
     res.send(`<h4>Now viewing Comment id #${postId} in the ${subreddit} subreddit</h4>`);
 });
 
+app.get('/search', (req, res) => {
+    const {q} = req.query;
+    if (!q) {
+        res.send('<h1>NOTHING FOUND IF NOTHING SEARCHED!</h1>');
+    }
+    res.send(`<h3>Searching for: ${q}</h3>`);
+});
+
 // app.get('/', (req, res) => {
 //     res.send(`What do these animals say?`);
 // });
