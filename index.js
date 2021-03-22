@@ -18,7 +18,7 @@ app.get('/r/:subreddit', (req, res) => {
 
 app.get('/r/:subreddit/comments/:postId', (req, res) => {
     const {subreddit, postId} = req.params;
-    res.send(`<h4>Now viewing Comment id #${postId} in the ${subreddit} subreddit</h4>`);
+    res.send(`<h3>Now viewing Comment id #${postId} in the ${subreddit} subreddit</h3>`);
 });
 
 app.get('/search', (req, res) => {
